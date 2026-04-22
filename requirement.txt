@@ -1,0 +1,6 @@
+pandas
+faker
+langchain
+langchain-groq
+python-dotenv
+pytest
