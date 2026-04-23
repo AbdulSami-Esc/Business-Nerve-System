@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Rotate CSV files and generate new data
-        run: python generate_data.py
+        run: python generate.py
 
       - name: Run Business Nerve System
         env:
