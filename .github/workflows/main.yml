@@ -1,8 +1,8 @@
 name: Weekly Business Health Report
 
 on:
-  schedule:
-    - cron: "0 3 * * 1"   # Every Monday at 3 AM UTC = 8 AM Pakistan time
+  ##schedule:
+  ## - cron: "0 3 * * 1"   # Every Monday at 3 AM UTC = 8 AM Pakistan time
   workflow_dispatch:        # Adds a manual "Run workflow" button on GitHub
 
 jobs:
