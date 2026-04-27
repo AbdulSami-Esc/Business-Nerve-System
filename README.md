@@ -154,11 +154,11 @@ To trigger manually: Actions tab → Weekly Business Health Report → Run workf
 Still to be completed in testing phase
 ---
 A CSV can have multiple problems or irrelevancy or errors which could inflate our scoriing engine.The gneric problem every business CSV can have are
-Problem 1 — String booleans
+- Problem 1 — String booleans
 CSV has an is_return column. Your scoring engine expects True or False — actual Python booleans. But when someone exports a CSV from Excel, it writes "TRUE" and "FALSE" as text strings instead. Your engine tries to do .sum() on that column to count returns. Python cannot add up strings. It crashed completely.
-Problem 2 — Duplicate orders
+- Problem 2 — Duplicate orders
 We added 40 rows that were exact copies of existing orders — same order_id, same everything. This happens in real life when someone exports a report, then exports it again and pastes it below. Your engine counted those customers twice and counted that revenue twice. The score looked better than reality.
-Problem 3 — Price above your cap
+- Problem 3 — Price above your cap
 We added 3 orders with a price of PKR 75,000. Your system has a cap of PKR 50,000 but nothing was enforcing it. Those orders inflated the revenue score silently.
 
 The scoring engine assumed its input was always clean. We proved it wasn't by injecting string booleans, duplicate orders, and above-cap prices — then added a sanitisation layer that runs before every score calculation.This sanitation layer performed following tasks:
