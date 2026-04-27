@@ -162,9 +162,9 @@ Problem 3 — Price above your cap
 We added 3 orders with a price of PKR 75,000. Your system has a cap of PKR 50,000 but nothing was enforcing it. Those orders inflated the revenue score silently.
 
 The scoring engine assumed its input was always clean. We proved it wasn't by injecting string booleans, duplicate orders, and above-cap prices — then added a sanitisation layer that runs before every score calculation.This sanitation layer performed following tasks:
-i)Converts "TRUE"/"FALSE" strings into real booleans
-ii)Removes any row whose order_id appeared before
-iii)Clips any price above PKR 50,000 down to 50,000
+- i)Converts "TRUE"/"FALSE" strings into real booleans
+- ii)Removes any row whose order_id appeared before
+- iii)Clips any price above PKR 50,000 down to 50,000
 
 ---
 
