@@ -1,0 +1,10 @@
+=== AFTER FIX — Header Injection Blocked ===
+After stripping \n and \r:
+BCC header in output: False
+
+--- Raw Headers ---
+Content-Type: multipart/alternative; boundary="===============0232826671436428686=="
+MIME-Version: 1.0
+From: Business Nerve System <bns@gmail.com>
+To: owner@business.com
+Subject: =?utf-8?q?Weekly_Report_=E2=80=94_Week_of_4_Nov_2024BCC=3A_attacker=40gmail=2Ecom?=

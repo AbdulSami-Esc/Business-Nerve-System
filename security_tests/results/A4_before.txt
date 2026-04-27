@@ -1,0 +1,11 @@
+=== BEFORE FIX — Header Injection ===
+Injected subject: 'Weekly Report — Week of 4 Nov 2024\nBCC: attacker@gmail.com'
+BCC header appeared in MIME output: False
+
+--- Raw Headers ---
+Content-Type: multipart/alternative; boundary="===============4155331789573949227=="
+MIME-Version: 1.0
+From: Business Nerve System <bns@gmail.com>
+To: owner@business.com
+Subject: =?utf-8?q?Weekly_Report_=E2=80=94_Week_of_4_Nov_2024?=
+ =?utf-8?q?_BCC=3A_attacker=40gmail=2Ecom?=

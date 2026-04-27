@@ -1,0 +1,11 @@
+=== BEFORE FIX — External CSV Attack ===
+Total rows                : 103
+is_return unique values   : ['TRUE', 'FALSE']
+Duplicate order_ids       : 40
+Max price in data         : PKR 75,000
+
+SYSTEM CRASHED
+Error: TypeError: Index(...) must be called with a collection of some kind, 'revenue' was passed
+
+This means a real external CSV with string booleans
+would silently deny the business owner their weekly report.
